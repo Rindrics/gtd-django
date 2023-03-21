@@ -8,6 +8,14 @@ services:
       - "POSTGRES_PASSWORD=${DATABASE_PASSWORD}"
 
   web:
+    environment:
+    - SECRET_KEY=${SECRET_KEY}
+    - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+    - DATABASE_NAME=${DATABASE_NAME}
+    - DATABASE_USER=${DATABASE_USER}
+    - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+    - DATABASE_HOST=${DATABASE_HOST}
+    - DATABASE_PORT=${DATABASE_PORT}
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
