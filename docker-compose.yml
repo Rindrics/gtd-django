@@ -8,6 +8,7 @@ services:
       - "POSTGRES_PASSWORD=${DATABASE_PASSWORD}"
 
   web:
+    image: rindrics/gtd-django:latest
     environment:
     - SECRET_KEY=${SECRET_KEY}
     - ALLOWED_HOSTS=${ALLOWED_HOSTS}
