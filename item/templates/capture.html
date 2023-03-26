@@ -1,0 +1,11 @@
+{% for item in items %}
+    <div>
+        <h3>{{ item.title }}</h3>
+    </div>
+{% endfor %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">stuff を追加</button>
+</form>
