@@ -1,8 +1,8 @@
 {% block content %}
-    <h2>{{ item.title }} を削除しますか？</h2>
+    <h2>Delete {{ item.title }}？</h2>
     <form method="post">
         {% csrf_token %}
-        <button type="submit">削除</button>
-        <a href="{% url 'item:capture' %}">キャンセル</a>
+        <button type="submit">Delete</button>
+        <a href="{% url 'item:capture' %}">Cancel</a>
     </form>
 {% endblock %}

@@ -1,7 +1,7 @@
 {% for item in items %}
     <div>
         <h3>{{ item.title }}</h3>
-        <a href="{% url 'item:update_item' item.id %}">更新</a> | <a href="{% url 'item:delete_item' item.id %}">削除</a>
+        <a href="{% url 'item:update_item' item.id %}">Update</a> | <a href="{% url 'item:delete_item' item.id %}">Delete</a>
     </div>
 {% endfor %}
 
@@ -9,5 +9,5 @@
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">stuff を追加</button>
+    <button type="submit">Capture to Inbox</button>
 </form>
