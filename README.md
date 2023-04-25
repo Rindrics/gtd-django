@@ -15,7 +15,6 @@ Access `localhost:8000`
 
 ### Manage Stuff
 
-
-`/localhost:8000/capture`
+`/localhost:8000/inbox`
 
 
